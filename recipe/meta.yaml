@@ -12,7 +12,7 @@ source:
     - eccodes_py3k.patch  # [py3k]
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
   detect_binary_files_with_prefix: true
 
