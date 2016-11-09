@@ -24,7 +24,3 @@ cmake $src_dir \
 
 make
 make install
-
-if [[ $(uname) == Darwin ]]; then
-  ln -s $SP_DIR/gribapi/_gribapi_swig.dylib $SP_DIR/gribapi/_gribapi_swig.so
-fi
