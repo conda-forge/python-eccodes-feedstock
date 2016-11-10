@@ -1,4 +1,4 @@
-{% set version = "0.13.0" %}
+{% set version = "2.0.0" %}
 
 package:
   name: python-eccodes
@@ -7,13 +7,11 @@ package:
 source:
   url: https://software.ecmwf.int/wiki/download/attachments/45757960/eccodes-{{ version }}-Source.tar.gz
   fn: eccodes-{{ version }}-Source.tar.gz
-  md5: 46a0a520f647cfa2fb5f287f22269603
-  patches:
-    - eccodes_py3k.patch  # [py3k]
+  sha256: 338b311df338950ace79a8d26ffae17f3425bdc56cb8b36b620a69f5841b64f0
 
 build:
-  number: 1
-  skip: True  # [win]
+  number: 0
+  skip: True  # [win or py3k]
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -23,18 +21,18 @@ requirements:
     - numpy x.x
     - boost 1.61.*
     - jasper
-    - libpng >=1.6.21,<1.7
+    - libpng >=1.6.23,<1.7
     - libnetcdf 4.4.*
-    - perl >=5.20
+    - perl
     - eccodes {{ version }}
   run:
     - python
     - numpy x.x
     - boost 1.61.*
     - jasper
-    - libpng >=1.6.21,<1.7
+    - libpng >=1.6.23,<1.7
     - libnetcdf 4.4.*
-    - perl >=5.20
+    - perl
     - eccodes {{ version }}
 
 test:
