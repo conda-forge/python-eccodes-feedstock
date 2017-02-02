@@ -1,4 +1,4 @@
-{% set version = "2.0.2" %}
+{% set version = "2.1.0" %}
 
 package:
   name: python-eccodes
@@ -7,11 +7,11 @@ package:
 source:
   url: https://software.ecmwf.int/wiki/download/attachments/45757960/eccodes-{{ version }}-Source.tar.gz
   fn: eccodes-{{ version }}-Source.tar.gz
-  sha256: e0368dd4dbd85edfd6a9fbe442a10fea611a773550f7ea7ce1f56ee0b340f6cb
+  sha256: e7382b06d99e9f6558751c888403181cbbac95ea51275c7ff8d41c15c2ccf554
 
 build:
-  number: 1
-  skip: True  # [win or py3k]
+  number: 0
+  skip: True  # [win]
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -42,7 +42,7 @@ about:
   home: https://software.ecmwf.int/wiki/display/ECC/ecCodes+Home
   license: Apache 2.0
   license_family: Apache
-  summary: ECMWF ecCodes Copyright 2005-2016 ECMWF.
+  summary: ECMWF ecCodes Copyright 2005-2017 ECMWF.
 
 extra:
   recipe-maintainers:
