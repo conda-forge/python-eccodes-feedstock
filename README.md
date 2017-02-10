@@ -7,7 +7,7 @@ Package license: Apache 2.0
 
 Feedstock license: BSD 3-Clause
 
-Summary: ECMWF ecCodes Copyright 2005-2016 ECMWF.
+Summary: ECMWF ecCodes Copyright 2005-2017 ECMWF.
 
 
 
