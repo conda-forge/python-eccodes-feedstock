@@ -1,4 +1,4 @@
-{% set version = "2.3.0" %}
+{% set version = "2.4.0" %}
 
 package:
   name: python-eccodes
@@ -7,7 +7,7 @@ package:
 source:
   url: https://software.ecmwf.int/wiki/download/attachments/45757960/eccodes-{{ version }}-Source.tar.gz
   fn: eccodes-{{ version }}-Source.tar.gz
-  sha256: a524febe8abf7c79aacfeb566029d15b76a3027bee0f7d83aa7f5d063f2918df
+  sha256: 2c360c32c26e858917d332b26de1269bcc39a4a39c882f1b73b4a96633843947
 
 build:
   number: 0
