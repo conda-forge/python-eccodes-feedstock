@@ -6,11 +6,10 @@ package:
 
 source:
   url: https://software.ecmwf.int/wiki/download/attachments/45757960/eccodes-{{ version }}-Source.tar.gz
-  fn: eccodes-{{ version }}-Source.tar.gz
   sha256: 2c360c32c26e858917d332b26de1269bcc39a4a39c882f1b73b4a96633843947
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win or py3k]
   detect_binary_files_with_prefix: true
 
@@ -18,8 +17,8 @@ requirements:
   build:
     - cmake
     - python
-    - numpy x.x
-    - boost 1.63.*
+    - numpy 1.8.*
+    - boost 1.64.*
     - jasper
     - libpng >=1.6.28,<1.7
     - libnetcdf 4.4.*
@@ -27,7 +26,7 @@ requirements:
     - eccodes {{ version }}
   run:
     - python
-    - numpy x.x
+    - numpy >=1.8
     - jasper
     - libpng >=1.6.28,<1.7
     - libnetcdf 4.4.*
