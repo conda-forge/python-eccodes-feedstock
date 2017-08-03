@@ -22,7 +22,7 @@ requirements:
     - jasper
     - libpng >=1.6.28,<1.7
     - libnetcdf 4.4.*
-    - perl
+    - perl 5.22.2.1
     - eccodes {{ version }}
   run:
     - python
@@ -36,6 +36,9 @@ test:
   imports:
     - eccodes
     - gribapi
+  commands:
+    - conda inspect linkages -p $PREFIX python-eccodes  # [not win]
+    - conda inspect objects -p $PREFIX python-eccodes  # [osx]
 
 about:
   home: https://software.ecmwf.int/wiki/display/ECC/ecCodes+Home
