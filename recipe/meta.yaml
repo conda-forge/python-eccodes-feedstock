@@ -9,7 +9,7 @@ source:
   sha256: 18ab44bc444168fd324d07f7dea94f89e056f5c5cd973e818c8783f952702e4e
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win or py3k]
   detect_binary_files_with_prefix: true
 
@@ -18,9 +18,9 @@ requirements:
     - cmake
     - python
     - numpy 1.8.*
-    - boost 1.64.*
+    - boost 1.65.1
     - jasper
-    - libpng >=1.6.28,<1.7
+    - libpng >=1.6.22,<1.6.31
     - libnetcdf 4.4.*
     - perl 5.22.2.1
     - eccodes {{ version }}
@@ -28,7 +28,7 @@ requirements:
     - python
     - numpy >=1.8
     - jasper
-    - libpng >=1.6.28,<1.7
+    - libpng >=1.6.22,<1.6.31
     - libnetcdf 4.4.*
     - eccodes {{ version }}
 
@@ -37,8 +37,8 @@ test:
     - eccodes
     - gribapi
   commands:
-    - conda inspect linkages -p $PREFIX python-eccodes  # [not win]
-    - conda inspect objects -p $PREFIX python-eccodes  # [osx]
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: https://software.ecmwf.int/wiki/display/ECC/ecCodes+Home
