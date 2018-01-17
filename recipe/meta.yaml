@@ -9,7 +9,7 @@ source:
   sha256: 0a069ff616661e07ddfd3de60c53ae6c38738dc126476735d6b8e2b6475bf15f
 
 build:
-  number: 2
+  number: 3
   skip: True  # [win or py3k]
   detect_binary_files_with_prefix: true
 
@@ -18,7 +18,7 @@ requirements:
     - cmake
     - python
     - numpy 1.8.*
-    - boost 1.65.1
+    - boost 1.66.0
     - jasper
     - libpng >=1.6.32,<1.6.35
     - libnetcdf 4.4.*
