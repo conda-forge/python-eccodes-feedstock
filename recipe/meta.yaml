@@ -9,7 +9,7 @@ source:
   sha256: 118f46cf6f800585580a5bc838128537ab0879073e9fcded49cd374e4c8d8e6a
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win or py3k]
   detect_binary_files_with_prefix: true
 
@@ -21,7 +21,7 @@ requirements:
     - boost 1.66.0
     - jasper
     - libpng >=1.6.32,<1.6.35
-    - libnetcdf 4.4.*
+    - libnetcdf 4.5.*
     - hdf5 1.10.1
     - perl 5.22.2.1
     - eccodes {{ version }}
@@ -30,7 +30,7 @@ requirements:
     - numpy >=1.8
     - jasper
     - libpng >=1.6.32,<1.6.35
-    - libnetcdf 4.4.*
+    - libnetcdf >=4.5
     - hdf5 1.10.1
     - eccodes {{ version }}
 
