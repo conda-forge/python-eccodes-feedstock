@@ -9,7 +9,7 @@ source:
   sha256: e0ba24c27cdd8133670fa3ea32be951d54030f2b880cacc9a9d87d9dbf372e1b
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win or py3k]
   detect_binary_files_with_prefix: true
 
@@ -23,7 +23,7 @@ requirements:
     - libpng >=1.6.32,<1.6.35
     - libnetcdf 4.5.*
     - hdf5 1.10.1
-    - perl 5.22.2.1
+    - perl
     - eccodes {{ version }}
   run:
     - python
