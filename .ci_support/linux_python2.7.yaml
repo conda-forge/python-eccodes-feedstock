@@ -1,10 +1,34 @@
+boost:
+- 1.67.0
+c_compiler:
+- toolchain_c
+cxx_compiler:
+- toolchain_cxx
+fortran_compiler:
+- toolchain_fort
+hdf5:
+- 1.10.2
 jasper:
 - 1.900.1
+libnetcdf:
+- '4.6'
+libpng:
+- 1.6.34
+numpy:
+- '1.9'
 perl:
 - '5.26'
 pin_run_as_build:
+  boost:
+    max_pin: x.x.x
+  hdf5:
+    max_pin: x.x.x
   jasper:
     max_pin: x
+  libnetcdf:
+    max_pin: x.x
+  libpng:
+    max_pin: x.x
   perl:
     max_pin: x.x.x
   python:
