@@ -2,12 +2,18 @@ boost:
 - 1.67.0
 c_compiler:
 - toolchain_c
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
 cxx_compiler:
 - toolchain_cxx
+docker_image:
+- condaforge/linux-anvil
 fortran_compiler:
 - toolchain_fort
 hdf5:
-- 1.10.2
+- 1.10.3
 jasper:
 - 1.900.1
 libnetcdf:
@@ -32,7 +38,7 @@ pin_run_as_build:
   perl:
     max_pin: x.x.x
   python:
-    max_pin: x.x
     min_pin: x.x
+    max_pin: x.x
 python:
 - '2.7'
