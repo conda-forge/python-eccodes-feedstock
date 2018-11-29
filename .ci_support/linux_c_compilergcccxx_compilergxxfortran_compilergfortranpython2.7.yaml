@@ -1,33 +1,33 @@
 boost:
-- 1.67.0
+- 1.68.0
+build_number_decrement:
+- '0'
 c_compiler:
-- toolchain_c
+- gcc
 channel_sources:
-- conda-forge,defaults
+- conda-forge/label/gcc7,defaults
 channel_targets:
-- conda-forge main
+- conda-forge gcc7
 cxx_compiler:
-- toolchain_cxx
+- gxx
 docker_image:
-- condaforge/linux-anvil
+- condaforge/linux-anvil-comp7
 fortran_compiler:
-- toolchain_fort
+- gfortran
 hdf5:
-- 1.10.3
+- 1.10.4
 jasper:
 - 1.900.1
 libnetcdf:
 - '4.6'
 libpng:
-- 1.6.34
+- 1.6.35
 numpy:
 - '1.9'
 perl:
 - '5.26'
 pin_run_as_build:
   boost:
-    max_pin: x.x.x
-  hdf5:
     max_pin: x.x.x
   jasper:
     max_pin: x
@@ -42,3 +42,11 @@ pin_run_as_build:
     max_pin: x.x
 python:
 - '2.7'
+zip_keys:
+- - c_compiler
+  - cxx_compiler
+  - fortran_compiler
+  - channel_sources
+  - channel_targets
+  - docker_image
+  - build_number_decrement
