@@ -6,6 +6,10 @@ export PING_SLEEP=30s
 export WORKDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 export BUILD_OUTPUT=$WORKDIR/build.out
 
+if [[ "$c_compiler" == "gcc" ]]; then
+  export PATH="${PATH}:${BUILD_PREFIX}/${HOST}/sysroot/usr/lib"
+fi
+
 touch $BUILD_OUTPUT
 
 dump_output() {
@@ -45,7 +49,8 @@ cmake $src_dir \
          -DENABLE_NETCDF=1 \
          -DENABLE_PNG=1 \
          -DENABLE_PYTHON=1 \
-         -DENABLE_FORTRAN=0
+         -DENABLE_FORTRAN=0 \
+         -DENABLE_AEC=1
 
 make -j $CPU_COUNT >> $BUILD_OUTPUT 2>&1
 export ECCODES_TEST_VERBOSE_OUTPUT=1

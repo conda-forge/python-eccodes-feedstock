@@ -1,4 +1,4 @@
-{% set version = "2.9.0" %}
+{% set version = "2.9.2" %}
 
 package:
   name: python-eccodes
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://software.ecmwf.int/wiki/download/attachments/45757960/eccodes-{{ version }}-Source.tar.gz
-  sha256: ff04eb1fa4c363438bbbd6d75b66b4237c7397f8b0bd311d9243b6b2dcfc09d6
+  sha256: 08f476c94605fb03a405fa83ea8fbd7078b1480e5836a0c8602bce753efcf2a1
 
 build:
-  number: 0
+  number: 1000
   skip: True  # [win or py3k]
   detect_binary_files_with_prefix: true
 
