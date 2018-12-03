@@ -45,7 +45,8 @@ cmake $src_dir \
          -DENABLE_NETCDF=1 \
          -DENABLE_PNG=1 \
          -DENABLE_PYTHON=1 \
-         -DENABLE_FORTRAN=0
+         -DENABLE_FORTRAN=0 \
+         -DENABLE_AEC=1
 
 make -j $CPU_COUNT >> $BUILD_OUTPUT 2>&1
 export ECCODES_TEST_VERBOSE_OUTPUT=1
