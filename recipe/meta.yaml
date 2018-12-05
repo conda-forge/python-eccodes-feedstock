@@ -10,7 +10,7 @@ source:
 
 build:
   number: 1000
-  skip: True  # [win or py3k]
+  skip: True  # [win]
   detect_binary_files_with_prefix: true
 
 requirements:
