@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://software.ecmwf.int/wiki/download/attachments/45757960/eccodes-{{ version }}-Source.tar.gz
+  url: https://confluence.ecmwf.int/download/attachments/131371724/eccodes-{{ version }}-Source.tar.gz
   sha256: 6dafe2fe3a9994ab2359f8bf8f6bad04dc4f936918999cf01e026323882b6b77
 
 build:
