@@ -1,5 +1,5 @@
 boost:
-- 1.68.0
+- 1.70.0
 c_compiler:
 - gcc
 c_compiler_version:
@@ -27,7 +27,7 @@ libnetcdf:
 libpng:
 - 1.6.35
 numpy:
-- '1.9'
+- '1.14'
 perl:
 - '5.26'
 pin_run_as_build:
