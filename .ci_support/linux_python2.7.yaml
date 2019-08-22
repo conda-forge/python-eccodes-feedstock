@@ -25,11 +25,11 @@ jasper:
 libnetcdf:
 - 4.6.2
 libpng:
-- 1.6.35
+- '1.6'
 numpy:
 - '1.14'
 perl:
-- '5.26'
+- 5.26.2
 pin_run_as_build:
   boost:
     max_pin: x.x.x
