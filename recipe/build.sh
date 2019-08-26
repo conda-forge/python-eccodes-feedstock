@@ -39,5 +39,5 @@ fi
 make install
 
 if [[ "${PY3K}" == "1" ]]; then
-  pip install eccodes-python --vv --no-deps
+  ${PYTHON} -m pip install eccodes-python -vv --no-deps
 fi
