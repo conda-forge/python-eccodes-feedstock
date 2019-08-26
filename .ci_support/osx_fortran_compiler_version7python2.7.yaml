@@ -17,7 +17,7 @@ cxx_compiler_version:
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
-- '4'
+- '7'
 hdf5:
 - 1.10.5
 jasper:
@@ -25,7 +25,7 @@ jasper:
 libnetcdf:
 - 4.6.2
 libpng:
-- 1.6.35
+- '1.6'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 macos_min_version:
@@ -33,7 +33,7 @@ macos_min_version:
 numpy:
 - '1.14'
 perl:
-- '5.26'
+- 5.26.2
 pin_run_as_build:
   boost:
     max_pin: x.x.x
@@ -49,4 +49,4 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- '3.6'
+- '2.7'
