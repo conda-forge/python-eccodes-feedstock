@@ -5,26 +5,26 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/e/eccodes-python/eccodes-python-{{ version }}.tar.gz
-  sha256: 587dd828ee5e13b6a7d35a362d6fd903d914dd0422f4010af95e8f45738e9143
+  url: https://github.com/ecmwf/eccodes-python/archive/{{ version }}.tar.gz
+  sha256: 1b228ad1589616b492a9377a68aa67ec42c1ecb681ae53d3d6ac83cb213c2c51
 
 build:
   number: 0
   skip: True  # [win or py2k]
-  detect_binary_files_with_prefix: true
 
 requirements:
   host:
     - python
     - pip
     - numpy
+    - cffi
     - eccodes >=2.13.0
   run:
     - python
     - {{ pin_compatible('numpy') }}
     - cffi
     - attrs
-    - eccodes >=2.13.0
+    - {{ pin_compatible('eccodes') }}
 
 test:
   imports:
@@ -36,7 +36,7 @@ about:
   license: Apache 2.0
   license_family: Apache
   license_file: LICENSE
-  summary: ECMWF ecCodes Copyright 2005-2018 ECMWF.
+  summary: ECMWF ecCodes Copyright 2017-2019 ECMWF.
   dev_url: https://github.com/ecmwf/eccodes-python
 
 extra:
