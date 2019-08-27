@@ -33,6 +33,7 @@ test:
   imports:
     - eccodes
     - gribapi
+    - gribapi._bindings
 
 about:
   home: https://software.ecmwf.int/wiki/display/ECC/ecCodes+Home
