@@ -1,4 +1,5 @@
 {% set version = "0.9.2" %}
+{% set eccodes_version = "2.13"}
 
 package:
   name: python-eccodes
@@ -13,18 +14,20 @@ build:
   skip: True  # [win or py2k]
 
 requirements:
+  build:
+    - {{ compiler('c') }}
   host:
     - python
     - pip
     - numpy
     - cffi
-    - eccodes >=2.13.0
+    - eccodes ={{ eccodes_version }}
   run:
     - python
     - {{ pin_compatible('numpy') }}
     - cffi
     - attrs
-    - {{ pin_compatible('eccodes') }}
+    - eccodes ={{ eccodes_version }}
 
 test:
   imports:
