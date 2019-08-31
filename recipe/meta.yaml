@@ -1,53 +1,47 @@
-{% set version = "2.12.3" %}
+{% set version = "0.9.2" %}
+{% set eccodes_version = "2.13" %}
 
 package:
   name: python-eccodes
   version: {{ version }}
 
 source:
-  url: https://confluence.ecmwf.int/download/attachments/131371724/eccodes-{{ version }}-Source.tar.gz
-  sha256: 6dafe2fe3a9994ab2359f8bf8f6bad04dc4f936918999cf01e026323882b6b77
+  url: https://github.com/ecmwf/eccodes-python/archive/{{ version }}.tar.gz
+  sha256: 1b228ad1589616b492a9377a68aa67ec42c1ecb681ae53d3d6ac83cb213c2c51
 
 build:
-  number: 1003
-  skip: True  # [win]
-  detect_binary_files_with_prefix: true
+  number: 0
+  skip: True  # [win or py2k]
 
 requirements:
   build:
-    - cmake
-    - perl
-    - {{ compiler('fortran') }}
     - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
   host:
     - python
+    - pip
     - numpy
-    - boost
-    - jasper
-    - libpng
-    - libnetcdf
-    - hdf5
-    - eccodes {{ version }}
+    - cffi
+    - eccodes ={{ eccodes_version }}
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - jasper
-    - libpng
-    - libnetcdf
-    - hdf5
-    - eccodes {{ version }}
+    - cffi
+    - attrs
+    - eccodes ={{ eccodes_version }}
 
 test:
   imports:
     - eccodes
     - gribapi
+    - gribapi._bindings
 
 about:
   home: https://software.ecmwf.int/wiki/display/ECC/ecCodes+Home
   license: Apache 2.0
   license_family: Apache
-  summary: ECMWF ecCodes Copyright 2005-2018 ECMWF.
+  license_file: LICENSE
+  summary: ECMWF ecCodes Copyright 2017-2019 ECMWF.
+  dev_url: https://github.com/ecmwf/eccodes-python
 
 extra:
   recipe-maintainers:
