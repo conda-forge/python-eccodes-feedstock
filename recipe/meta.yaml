@@ -10,8 +10,8 @@ source:
   sha256: 45ec0383a831054a9e775c5fde706ddd21ad0a6177df8f6a8cbd5ab0f80fdf76
 
 build:
-  number: 0
-  skip: True  # [win or py2k]
+  number: 1
+  skip: True  # [py2k]
 
 requirements:
   build:
@@ -33,7 +33,7 @@ test:
   imports:
     - eccodes
     - gribapi
-    - gribapi._bindings
+    - gribapi._bindings  # [not win]
 
 about:
   home: https://software.ecmwf.int/wiki/display/ECC/ecCodes+Home
@@ -49,3 +49,4 @@ extra:
     - pelson
     - ocefpaf
     - kynan
+    - dtip
