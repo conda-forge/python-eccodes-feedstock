@@ -20,12 +20,12 @@ requirements:
     - python
     - pip
     - numpy
-    - cffi  # [not win]
+    - cffi
     - eccodes ={{ eccodes_version }}
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - cffi  # [not win]
+    - cffi
     - attrs
     - eccodes ={{ eccodes_version }}
 
