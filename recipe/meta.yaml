@@ -20,12 +20,12 @@ requirements:
     - python
     - pip
     - numpy
-    - cffi
+    - cffi  # [not win]
     - eccodes ={{ eccodes_version }}
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - cffi
+    - cffi  # [not win]
     - attrs
     - eccodes ={{ eccodes_version }}
 
@@ -33,7 +33,7 @@ test:
   imports:
     - eccodes
     - gribapi
-    - gribapi._bindings
+    - gribapi._bindings  # [not win]
 
 about:
   home: https://software.ecmwf.int/wiki/display/ECC/ecCodes+Home
