@@ -10,7 +10,7 @@ source:
   sha256: 069f2df4afe772e096f1e9b1919f87ad32bf014a60e4193b8a72f6c3fd79c056
 
 build:
-  number: 0
+  number: 1
   skip: True  # [py2k]
 
 requirements:
@@ -50,3 +50,4 @@ extra:
     - ocefpaf
     - kynan
     - dtip
+    - shahramn
