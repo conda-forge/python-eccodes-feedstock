@@ -10,7 +10,7 @@ source:
   sha256: 336dcc9705564bae851cbb05b1b97fcd729ec7a31348205ce1f02cb09a7d41ce
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py2k]
 
 requirements:
@@ -21,13 +21,13 @@ requirements:
     - pip
     - numpy
     - cffi
-    - eccodes ={{ eccodes_version }}
+    - eccodes >={{ eccodes_version }}
   run:
     - python
     - {{ pin_compatible('numpy') }}
     - cffi
     - attrs
-    - eccodes ={{ eccodes_version }}
+    - eccodes >={{ eccodes_version }}
 
 test:
   imports:
@@ -40,7 +40,7 @@ about:
   license: Apache 2.0
   license_family: Apache
   license_file: LICENSE
-  summary: ECMWF ecCodes Copyright 2017-2019 ECMWF.
+  summary: ECMWF ecCodes Copyright 2017- ECMWF.
   dev_url: https://github.com/ecmwf/eccodes-python
 
 extra:
