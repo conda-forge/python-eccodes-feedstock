@@ -1,4 +1,4 @@
-{% set version = "2020.03.0" %}
+{% set version = "2020.04.0" %}
 {% set eccodes_version = "2.16" %}
 
 package:
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/ecmwf/eccodes-python/archive/{{ version }}.tar.gz
-  sha256: 336dcc9705564bae851cbb05b1b97fcd729ec7a31348205ce1f02cb09a7d41ce
+  sha256: b2589c1850d0906d5b22bf699c0977736a704ee35799e4ea618e253332793ac4
 
 build:
-  number: 2
+  number: 0
   skip: true  # [py2k]
 
 requirements:
