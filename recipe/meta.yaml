@@ -1,5 +1,5 @@
 {% set version = "2021.03.0" %}
-{% set eccodes_version = "2.16" %}
+{% set eccodes_version = "2.20.0" %}
 
 package:
   name: python-eccodes
