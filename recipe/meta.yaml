@@ -1,5 +1,5 @@
 {% set version = "2021.03.0" %}
-{% set eccodes_version = "2.16" %}
+{% set eccodes_version = "2.20.0" %}
 
 package:
   name: python-eccodes
@@ -10,7 +10,7 @@ source:
   sha256: 7251436ddc20bded9a96408c705360d282918f2a6003dee05457b62d962b8491
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py2k]
 
 requirements:
