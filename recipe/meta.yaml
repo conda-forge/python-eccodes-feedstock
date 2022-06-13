@@ -1,5 +1,5 @@
-{% set version = "1.4.0" %}
-{% set eccodes_version = "2.23.0" %}
+{% set version = "1.4.2" %}
+{% set eccodes_version = "2.26.0" %}
 
 package:
   name: python-eccodes
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/ecmwf/eccodes-python/archive/{{ version }}.tar.gz
-  sha256: 625055bc9efba37d3564562c17779814fa3cc9f6e5ebe0115bf3d78edcc7d503
+  sha256: 4049268d58ba2a87574c23e06b1539cb314944a7b75efbd4cd0efc95e4cfe474
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py2k]
 
 requirements:
@@ -43,7 +43,7 @@ test:
 
 about:
   home: https://software.ecmwf.int/wiki/display/ECC/ecCodes+Home
-  license: Apache 2.0
+  license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
   summary: ECMWF ecCodes Copyright 2017- ECMWF.
