@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/55/d1/511defc811c6ce7cbb0df79969b174fe97ccf7c305380f8842c1311cbbdb/eccodes-{{ version }}.tar.gz
+  url: https://github.com/ecmwf/eccodes-python/archive/{{ version }}.tar.gz
   sha256: 63fa80a1d1b445904f486bc396a6a6605df029f4e215acc28ceb1a1ff5eb664f
 
 build:
