@@ -11,13 +11,13 @@ channel_targets:
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 numpy:
-- '1.19'
+- '1.20'
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.8.* *_73_pypy
+- 3.9.* *_73_pypy
 target_platform:
 - linux-64
 zip_keys:
