@@ -10,7 +10,7 @@ source:
   sha256: 4049268d58ba2a87574c23e06b1539cb314944a7b75efbd4cd0efc95e4cfe474
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py2k]
 
 requirements:

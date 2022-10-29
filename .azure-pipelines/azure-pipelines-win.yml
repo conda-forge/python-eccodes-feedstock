@@ -8,23 +8,23 @@ jobs:
     vmImage: windows-2019
   strategy:
     matrix:
-      win_64_numpy1.19python3.7.____cpython:
-        CONFIG: win_64_numpy1.19python3.7.____cpython
+      win_64_numpy1.20python3.8.____73_pypy:
+        CONFIG: win_64_numpy1.20python3.8.____73_pypy
         UPLOAD_PACKAGES: 'True'
-      win_64_numpy1.19python3.8.____73_pypy:
-        CONFIG: win_64_numpy1.19python3.8.____73_pypy
+      win_64_numpy1.20python3.8.____cpython:
+        CONFIG: win_64_numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-      win_64_numpy1.19python3.8.____cpython:
-        CONFIG: win_64_numpy1.19python3.8.____cpython
+      win_64_numpy1.20python3.9.____73_pypy:
+        CONFIG: win_64_numpy1.20python3.9.____73_pypy
         UPLOAD_PACKAGES: 'True'
-      win_64_numpy1.19python3.9.____73_pypy:
-        CONFIG: win_64_numpy1.19python3.9.____73_pypy
-        UPLOAD_PACKAGES: 'True'
-      win_64_numpy1.19python3.9.____cpython:
-        CONFIG: win_64_numpy1.19python3.9.____cpython
+      win_64_numpy1.20python3.9.____cpython:
+        CONFIG: win_64_numpy1.20python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
       win_64_numpy1.21python3.10.____cpython:
         CONFIG: win_64_numpy1.21python3.10.____cpython
+        UPLOAD_PACKAGES: 'True'
+      win_64_numpy1.23python3.11.____cpython:
+        CONFIG: win_64_numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
   variables:
@@ -68,10 +68,12 @@ jobs:
         call activate base
         run_conda_forge_build_setup
       displayName: conda-forge build setup
-    
 
     - script: |
         call activate base
+        if EXIST LICENSE.txt (
+          copy LICENSE.txt "recipe\\recipe-scripts-license.txt"
+        )
         conda.exe mambabuild "recipe" -m .ci_support\%CONFIG%.yaml --suppress-variables
       displayName: Build recipe
       env:
