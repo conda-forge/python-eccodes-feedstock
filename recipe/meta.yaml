@@ -1,4 +1,4 @@
-{% set version = "1.5.1" %}
+{% set version = "1.5.2" %}
 {% set eccodes_version = "2.26.0" %}
 
 package:
