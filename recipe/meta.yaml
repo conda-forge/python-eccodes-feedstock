@@ -1,4 +1,4 @@
-{% set version = "1.6.1" %}
+{% set version = "1.7.0" %}
 # See https://github.com/ecmwf/eccodes-python/blob/{{ version }}/gribapi/__init__.py#L17
 {% set eccodes_version = "2.31.0" %}
 
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://github.com/ecmwf/eccodes-python/archive/{{ version }}.tar.gz
-  sha256: d1907f9c8c0934b90c7bf7c0bb4ec01f27e0fb1ed7c302c7e2b4ca66247f1bd9
+  sha256: 68227124c5f88ff6c8f345779e9e058dfd086b4a966cf615a4f8b28cdcc1e3cc
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
