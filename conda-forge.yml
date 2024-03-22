@@ -1,5 +1,7 @@
 build_platform:
   osx_arm64: osx_64
+provider:
+  linux_aarch64: default
 conda_build:
   pkg_format: '2'
 conda_forge_output_validation: true
