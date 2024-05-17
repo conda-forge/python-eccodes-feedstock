@@ -11,7 +11,7 @@ source:
   sha256: 68227124c5f88ff6c8f345779e9e058dfd086b4a966cf615a4f8b28cdcc1e3cc
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -20,6 +20,7 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - cffi                                   # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
@@ -29,7 +30,6 @@ requirements:
     - eccodes >={{ eccodes_version }}
   run:
     - python
-    - {{ pin_compatible('numpy') }}
     - cffi
     - findlibs
     - attrs
