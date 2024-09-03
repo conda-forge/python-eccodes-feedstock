@@ -23,6 +23,7 @@ requirements:
     - {{ stdlib("c") }}
   host:
     - python
+    - setuptools
     - pip
     - numpy
     - cffi
