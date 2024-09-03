@@ -11,7 +11,7 @@ source:
   sha256: 44b6420ff63cd853d15ab22e6d83be1f88a2e9652255e3e4a68fbb99a17d0fa8
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -23,6 +23,7 @@ requirements:
     - {{ stdlib("c") }}
   host:
     - python
+    - setuptools
     - pip
     - numpy
     - cffi
