@@ -5,13 +5,13 @@ MACOSX_SDK_VERSION:
 c_compiler:
 - clang
 c_compiler_version:
-- '17'
+- '19'
 c_stdlib:
 - macosx_deployment_target
 c_stdlib_version:
 - '11.0'
 channel_sources:
-- conda-forge/label/python_rc,conda-forge
+- conda-forge
 channel_targets:
 - conda-forge main
 macos_machine:
@@ -23,10 +23,9 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.13.* *_cp313
+- 3.10.* *_cpython
 target_platform:
 - osx-arm64
 zip_keys:
 - - python
-  - numpy
   - channel_sources
