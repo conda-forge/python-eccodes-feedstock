@@ -1,4 +1,4 @@
-{% set version = "2.37.0" %}
+{% set version = "2.43.0" %}
 
 package:
   name: python-eccodes
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/ecmwf/eccodes-python/archive/{{ version }}.tar.gz
-  sha256: 5ef51c5548aeab3cb23b0a1f5208095dc47b6d594690769b09a66741f1e75c2f
+  sha256: 1a37323787d7808ddd039e85fe39a077efb158e4430957f3a2822b40c982cf59
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
