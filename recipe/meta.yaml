@@ -29,9 +29,9 @@ requirements:
     - eccodes >={{ version }}
   run:
     - python
+    - attrs
     - cffi
     - findlibs
-    - attrs
     - eccodes >={{ version }}
 
 test:
