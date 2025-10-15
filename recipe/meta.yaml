@@ -7,6 +7,8 @@ package:
 source:
   url: https://github.com/ecmwf/eccodes-python/archive/{{ version }}.tar.gz
   sha256: ec02f7a4e5a819efb9c13e1cdc012391d74e601ebc9cd67029f22c4dc73c15ae
+  patches:
+    - 0001-use-conda-forge-name-for-eccodeslib.patch
 
 build:
   number: 0
@@ -35,10 +37,14 @@ requirements:
     - eccodes >={{ version }}
 
 test:
+  requires:
+    - pip
   imports:
     - eccodes
     - gribapi
     - gribapi._bindings  # [not win]
+  commands:
+    - pip check
 
 about:
   home: https://software.ecmwf.int/wiki/display/ECC/ecCodes+Home
