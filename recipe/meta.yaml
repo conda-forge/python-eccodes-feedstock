@@ -1,4 +1,4 @@
-{% set version = "2.44.0" %}
+{% set version = "2.45.0" %}
 
 package:
   name: python-eccodes
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://github.com/ecmwf/eccodes-python/archive/{{ version }}.tar.gz
-  sha256: ec02f7a4e5a819efb9c13e1cdc012391d74e601ebc9cd67029f22c4dc73c15ae
+  sha256: 05f1ee6d9647fbd7fc1f601027ab129e0ccf749b6069e2e47a7365ff63bb6860
   patches:
     - 0001-use-conda-forge-name-for-eccodeslib.patch
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
