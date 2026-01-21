@@ -1,25 +1,12 @@
-From 053c0e500eeecfc9a5fefe088500ac023556f96b Mon Sep 17 00:00:00 2001
-From: Bouwe Andela <b.andela@esciencecenter.nl>
-Date: Wed, 15 Oct 2025 11:05:50 +0200
-Subject: [PATCH] use conda-forge name for eccodeslib
-
----
- setup.py | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
-diff --git a/setup.py b/setup.py
-index 105dd3e..122ae53 100644
---- a/setup.py
-+++ b/setup.py
-@@ -90,7 +90,7 @@ install_requires += [
-     "attrs",
-     "cffi",
-     "findlibs",
--    "eccodeslib;platform_system!='Windows'",
-+    "eccodes;platform_system!='Windows'",
- ]
+diff -ruN eccodes-python-2.45.0/setup.py eccodes-python-2.45.0-patch/setup.py
+--- eccodes-python-2.45.0/setup.py	2026-01-15 17:08:53.000000000 +0100
++++ eccodes-python-2.45.0-patch/setup.py	2026-01-21 10:30:32.981819412 +0100
+@@ -97,7 +97,7 @@
+ # only add eccodeslib as dependency if building a distribution that should depend on it
+ if binary:
+     install_requires += [
+-        "eccodeslib;platform_system!='Windows'",
++        "eccodes;platform_system!='Windows'",
+     ]
  
  setuptools.setup(
--- 
-2.48.1
-

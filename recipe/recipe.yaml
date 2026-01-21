@@ -1,0 +1,72 @@
+schema_version: 1
+
+context:
+  version: "2.45.0"
+
+package:
+  name: python-eccodes
+  version: ${{ version }}
+
+source:
+  url: https://github.com/ecmwf/eccodes-python/archive/${{ version }}.tar.gz
+  sha256: 05f1ee6d9647fbd7fc1f601027ab129e0ccf749b6069e2e47a7365ff63bb6860
+  patches:
+    - 0001-use-conda-forge-name-for-eccodeslib.patch
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - if: build_platform != target_platform
+      then: python
+    - if: build_platform != target_platform
+      then: cross-python_${{ target_platform }}
+    - if: build_platform != target_platform
+      then: numpy
+    - if: build_platform != target_platform
+      then: cffi
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
+  host:
+    - python
+    - setuptools
+    - pip
+    - numpy
+    - cffi
+    - findlibs
+    - eccodes >=${{ version }}
+  run:
+    - python
+    - attrs
+    - cffi
+    - findlibs
+    - eccodes >=${{ version }}
+
+tests:
+  - python:
+      imports:
+        - eccodes
+        - gribapi
+        - if: not win
+          then: gribapi._bindings
+      pip_check: true
+
+about:
+  license: Apache-2.0
+  license_file: LICENSE
+  summary: ECMWF ecCodes Copyright 2017- ECMWF.
+  homepage: https://software.ecmwf.int/wiki/display/ECC/ecCodes+Home
+  repository: https://github.com/ecmwf/eccodes-python
+
+extra:
+  recipe-maintainers:
+    - kmuehlbauer
+    - pelson
+    - ocefpaf
+    - kynan
+    - dtip
+    - iainrussell
+    - shahramn
+    - xylar
+    - zklaus
