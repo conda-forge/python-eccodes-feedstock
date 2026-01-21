@@ -10,11 +10,9 @@ package:
 source:
   url: https://github.com/ecmwf/eccodes-python/archive/${{ version }}.tar.gz
   sha256: 05f1ee6d9647fbd7fc1f601027ab129e0ccf749b6069e2e47a7365ff63bb6860
-  patches:
-    - 0001-use-conda-forge-name-for-eccodeslib.patch
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
