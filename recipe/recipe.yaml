@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "2.46.0"
+  version: "2.47.0"
 
 package:
   name: python-eccodes
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/ecmwf/eccodes-python/archive/${{ version }}.tar.gz
-  sha256: 9dd0753b415d018121ffeb702abafa9b3e78bfdbe6d5174ac43cdbfe6bbbd9ff
+  sha256: 350291df04a4d517ab01584c1f38ca764178d52f6146f636323b681aa883c391
 
 build:
   number: 0
