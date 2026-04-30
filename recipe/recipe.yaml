@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/ecmwf/eccodes-python/archive/${{ version }}.tar.gz
-  sha256: 350291df04a4d517ab01584c1f38ca764178d52f6146f636323b681aa883c391
+  sha256: 5a4336321349342110e8766ee52280f2a97ef64cd95eb013166cb8d75c69cfd8
 
 build:
   number: 0
